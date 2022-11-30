@@ -3,63 +3,89 @@ package com.bridgelabz.linecomparisionoops;
 import java.util.Scanner;
 
 public class CompareLine {
-    public static void main(String args[]) {
+    private int X1;
+    private int X2;
+    private int Y1;
+    private int Y2;
+    private int A1;
+    private int A2;
+    private int B1;
+    private int B2;
 
-        System.out.println("Welcome to Line Comparison Computation");
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter points of First line");
-        System.out.println("Enter coordinates of first point x1 y1 : ");
-        int x1 = scanner.nextInt();
-        int y1 = scanner.nextInt();
-        System.out.println("Enter coordinates of second point x2s y2 : ");
-        int x2 = scanner.nextInt();
-        int y2 = scanner.nextInt();
-        Double length1 = (Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1)));
-        System.out.printf("length of first line is = "+length1);
-
-
-        System.out.println("Enter points of second line : ");
-        System.out.println("Enter coordinates of first point a1 b1 : ");
-        int a1 = scanner.nextInt();
-        int b1 = scanner.nextInt();
-        System.out.println("Enter coordinates of second point a2 b2 : ");
-        int a2 = scanner.nextInt();
-        int b2 = scanner.nextInt();
-        scanner.close();
-        Double length2 = (Math.sqrt((a2-a1)*(a2-a1) + (b2-b1)*(b2-b1)));
-        System.out.printf("length of second line is =   "+length2);
-
-        compareTwoLines(length1, length2);
-        checkLineEquality(length1, length2);
-
+    public int getX1() {
+        return X1;
     }
 
-    private static void checkLineEquality(Double length1, Double length2) {
-        boolean x = (length1.equals(length2));
-        if (x)
-        {
-            System.out.println("Length of two lines are equal");
-        }
-        else
-        {
-            System.out.println("Length of two lines are not equal");
-        }
+    public void setX1(int X1) {
+        this.X1 = X1;
     }
 
-    private static void compareTwoLines(Double length1, Double length2) {
-        int x = (length1.compareTo(length2));
-        if (x > 0)
-        {
-            System.out.println(" length of Line1 is greater than line2");
-        }
-        else if (x < 0)
-        {
-            System.out.println("length line2 is greater than line1");
-        }
-        else
-        {
-            System.out.println("length of two lines are equal");
-        }
+    public int getX2() {
+        return X2;
+    }
+
+    public void setX2(int X2) {
+        this.X2 = X2;
+    }
+
+    public int getY1() {
+        return Y1;
+    }
+
+    public void setY1(int Y1) {
+        this.Y1 = Y1;
+    }
+
+    public int getY2() {
+        return Y2;
+    }
+
+    public void setY2(int Y2) {
+        this.Y2 = Y2;
+    }
+
+    public int getA1() {
+        return A1;
+    }
+
+    public void setA1(int A1) {
+        this.A1 = A1;
+    }
+
+    public int getA2() {
+        return A2;
+    }
+
+    public void setA2(int A2) {
+        this.A2 = A2;
+    }
+
+    public int getB1() {
+        return B1;
+    }
+
+    public void setB1(int B1) {
+        this.B1 = B1;
+    }
+
+    public int getB2() {
+        return B2;
+    }
+    public void setB2(int B2) {
+        this.B2 = B2;
+    }
+    public String toString(){
+        return "CompareLine{"+
+                "X1="+X1+
+                ",X2="+X2+
+                ",Y1="+Y1+
+                ",Y2="+Y2+
+                ",A1="+A1+
+                ",A2="+A2+
+                ",B1="+B1+
+                ",B2="+B2+
+                '}';
+
     }
 
 }
